@@ -1,0 +1,24 @@
+{
+  "name": "99-code-challenge",
+  "version": "1.0.0",
+  "description": "99-code-challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hqthinh26/99-code-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/hqthinh26/99-code-challenge/issues"
+  },
+  "homepage": "https://github.com/hqthinh26/99-code-challenge#readme",
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}
