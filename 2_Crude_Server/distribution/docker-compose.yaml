@@ -1,0 +1,26 @@
+name: 99-code-challenge
+services:
+  crude-server:
+    build:
+      context: ../
+      dockerfile: ./distribution/Dockerfile
+
+    restart: always
+
+    volumes:
+      - ../:/opt/99-code-challenge/crude-server
+      - /opt/99-code-challenge/crude-server/node_modules
+    ports:
+      - 3600:3600
+      
+    command: >
+      npm run dev:start
+
+  postgres:
+    image: postgres:17
+    environment:
+      - POSTGRES_USER=code-challenge-user
+      - POSTGRES_PASSWORD=02OctZrYv3fCtJlKTMLfPjAMI35mDpYu7GhGP5pr0BLmybdhylAIaTJRJFc1mOcf
+      - POSTGRES_DB=code-challenge
+    ports:
+      - 5432:5432
