@@ -9,13 +9,13 @@
 //     },
 //   });
 
+import { CODE_CHALLENGE_URL } from "#core/config";
 import knexConstructor from "knex";
 import pg from "pg";
 
 export const db = knexConstructor({
   client: "pg",
-  connection:
-    "postgresql://code-challenge-user:02OctZrYv3fCtJlKTMLfPjAMI35mDpYu7GhGP5pr0BLmybdhylAIaTJRJFc1mOcf@postgres:5432/code-challenge",
+  connection: CODE_CHALLENGE_URL,
   pool: { min: 0, max: 10 },
   acquireConnectionTimeout: 10_000,
 

@@ -2,7 +2,8 @@ import express from "express";
 import type { Request, Response, NextFunction } from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
-import { dbConnectionHealthCheck, runMigrations } from "./core/postgres";
+import '#core/config/env.validator';
+import { dbConnectionHealthCheck, runMigrations } from "#core/db/postgres";
 
 const app = express();
 

@@ -15,7 +15,7 @@ npm run server:dev
 
 #### NPM Libraries Installation
 
-- Step 1: Install the command using the NPM command
+- Step 1: Install the library using the npm command
 - Step 2: Re-build the server image to refresh to anonymous docker volumn
 
 ```SHELL
