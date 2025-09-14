@@ -1,5 +1,10 @@
 # HOW TO RUN THE SOFTWARE
 
+### API Documentation
+
+- Please refers the provided link below to access the server's api documetation
+- [API_DOCUMENTATION](https://www.postman.com/self-promoting/workspace/99-code-challenge/request/24666459-4ba29e12-ab08-41b2-896d-fe47c3c0e322?action=share&creator=24666459)
+
 ### Prerequisite
 
 - Docker installed - https://docs.docker.com/engine/install/

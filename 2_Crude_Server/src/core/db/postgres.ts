@@ -2,7 +2,7 @@ import { CODE_CHALLENGE_URL } from "#core/config";
 import knexConstructor from "knex";
 import pg from "pg";
 import { Knex } from "knex";
-import { TODO_TABLE_NAME, TodoSchema } from "#core/schema/todo.schema";
+import { TODO_TABLE_NAME, TodoSchema } from "#modules/todo/todo.schema";
 
 export const db = knexConstructor({
   client: "pg",

@@ -26,7 +26,7 @@ app.use((_: Request, res: Response, next: NextFunction) => {
   next();
 });
 
-/** Register the api routes */
+/** Register the api routes && attach global error handler */
 routes(app).use(globalErrorHandlerMiddleware);
 
 (async function () {

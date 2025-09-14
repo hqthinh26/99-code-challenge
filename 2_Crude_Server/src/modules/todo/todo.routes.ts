@@ -15,22 +15,22 @@ todoRouter.post("/api/v1/todo", todoControllers.createTodo);
  * List todo with fitler by name
  */
 
-todoRouter.get("/api/v1/todo/list", todoControllers.listTodo);
+todoRouter.get("/api/v1/todo", todoControllers.listTodo);
 
 /**
  * Get todo details
  */
-todoRouter.get("/api/v1/todo/:todoId", todoControllers.getTodo);
+todoRouter.get("/api/v1/todo/:todoId", todoControllers.getTodoById);
 
 /**
  * Update todo details
  */
 
-todoRouter.put("/api/v1/todo/:todoId", todoControllers.updateTodo);
+todoRouter.put("/api/v1/todo/:todoId", todoControllers.updateTodoById);
 
 /**
  * Delete todo details (Soft deletion)
  */
-todoRouter.delete("/api/v1/todo/:todoId", todoControllers.updateTodo);
+todoRouter.delete("/api/v1/todo/:todoId", todoControllers.deleteTodoById);
 
 export default todoRouter;
