@@ -1,17 +1,8 @@
-// const knex = require('knex')({
-//     client: 'mysql',
-//     connection: {
-//       host: '127.0.0.1',
-//       port: 3306,
-//       user: 'your_database_user',
-//       password: 'your_database_password',
-//       database: 'myapp_test',
-//     },
-//   });
-
 import { CODE_CHALLENGE_URL } from "#core/config";
 import knexConstructor from "knex";
 import pg from "pg";
+import { Knex } from "knex";
+import { TODO_TABLE_NAME, TodoSchema } from "#core/schema/todo.schema";
 
 export const db = knexConstructor({
   client: "pg",
@@ -21,7 +12,7 @@ export const db = knexConstructor({
 
   migrations: {
     extension: "ts",
-    directory: "migrations",
+    directory: "./src/migrations",
     loadExtensions: [".ts"],
   },
 });
@@ -49,4 +40,17 @@ export async function runMigrations() {
   /** By default, Migration lastest command will be run every time the server starts */
   const [, fileNames = []] = await db.migrate.latest();
   console.log(`[Db-Migration] ${fileNames.length} processed`);
+}
+
+declare module "knex/types/tables" {
+  interface User {
+    id: number;
+    name: string;
+    created_at: string;
+    updated_at: string;
+  }
+
+  interface Tables {
+    [TODO_TABLE_NAME]: TodoSchema;
+  }
 }
