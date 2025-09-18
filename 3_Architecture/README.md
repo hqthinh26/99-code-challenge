@@ -10,6 +10,9 @@
 
 ### Architecture Design
 
-1. Fetch top 10 scores 
+1. Fetch top 10 scores
 
 ![System_Design](./Fetch_Top_10.png)
+
+2. Write new scores & Update dashboard
+![System_Design](./Insert_User_New_Score.png)
