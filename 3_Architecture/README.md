@@ -46,7 +46,7 @@
 
 ##### 2.1 Definition of Done
 
-- **API Name: [GET] /api/v1/scores**
+- <ins>API Name: [GET] /api/v1/scores</ins>
 
 - The Web App must render the latest Top 10 Players. The WebApp and Leaderboard Service must establish a relationship with leaderboard service. There are several options to achieve it.
 
@@ -70,7 +70,7 @@
 
 ##### 3.1 Definition of Done
 
-- **API Name: [POST] /api/v1/scores**
+- <ins>API Name: [POST] /api/v1/scores</ins>
 
 - Verify player's identify using JWT token in the request **Authorization** header
 
