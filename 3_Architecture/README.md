@@ -46,13 +46,13 @@
 
 ##### 2.1 Definition of Done
 
-- API Name: [GET] /api/v1/scores
+- **API Name: [GET] /api/v1/scores**
 
 - The Web App must render the latest Top 10 Players. The WebApp and Leaderboard Service must establish a relationship with leaderboard service. There are several options to achieve it.
 
   - WebSocket - Sub Miliseconds Update but CPU & Memory Expensive (Stateful)
-    > [!NOTE]
     > WebSocket is chosen in My Architecture Design. Alternatives are listed below.
+
   - Long Pooling - Miliseconds Update but less CPU & Memory Expensive && Easy to implement (Stateless)
   - Short Pooling - Miliseconds Update but more expensive than Long Pooling, because of chattiness (Stateless) - Rarely used.
 
@@ -60,9 +60,7 @@
 
   - Leverage Sorted Sets DSA in Redis to rank players based on scores - All Players are ranked in this data structure
   - Cache the top 10 player in Redis.
-  - Persist user info & individual player scoring in persistent medium
-    > [!NOTE]
-    > Recommended Postgres
+  - Persist user info & individual player scoring in persistent medium > [!NOTE] > Recommended Postgres
 
 ##### 2.2 Architecture Design
 
@@ -72,7 +70,7 @@
 
 ##### 3.1 Definition of Done
 
-- API Name: [POST] /api/v1/scores
+- **API Name: [POST] /api/v1/scores**
 
 - Verify player's identify using JWT token in the request **Authorization** header
 
@@ -85,8 +83,6 @@
 - [OPTIONAL] Invalidate the Top10 cache (if you take the optional step above)
 
 - Notify WebSocket connection if there is a change in Top 10 Leaderboard
-
-  > [!IMPORTANT]
   > The reference to these WebSocket connections are stored in the Leaderboard Service Heap Memory. If the service crashes, all connections are technically lost.
   > So it is very important to have some logic to handle the re-establishment of dropped connection
 
